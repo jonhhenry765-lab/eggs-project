@@ -1,0 +1,7 @@
+{
+  "name": "Alkhair Meta Eggs",
+  "description": "Shop fresh farm eggs, quality chicken and poultry products from Alkhair Meta Eggs. Fresh, hygienic and carefully handled products delivered to your door.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

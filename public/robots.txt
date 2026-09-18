@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alkhairmetaeggs.pro/sitemap.xml
