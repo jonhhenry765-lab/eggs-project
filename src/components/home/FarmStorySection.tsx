@@ -19,7 +19,7 @@ export const FarmStorySection: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
               <img
                 src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=80"
-                alt="Alkhair Meta Farm Poultry Care"
+                alt="Alrehman Meta Farm Poultry Care"
                 className="w-full h-[420px] sm:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -60,7 +60,7 @@ export const FarmStorySection: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-zinc-600 leading-relaxed">
-              Alkhair Meta Eggs is committed to providing fresh, reliable and quality poultry products to families and businesses. We combine responsible poultry farming, quality feed, hygiene and careful handling to bring better products to your table.
+              Alrehman Meta Eggs is committed to providing fresh, reliable and quality poultry products to families and businesses. We combine responsible poultry farming, quality feed, hygiene and careful handling to bring better products to your table.
             </p>
 
             <div className="space-y-3 pt-2">

@@ -152,7 +152,7 @@ export const AdminDashboardModal: React.FC = () => {
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-black font-display tracking-wide">
-                  Alkhair Farm Control Panel
+                  Alrehman  Control Panel
                 </h2>
                 <span className="text-[10px] bg-amber-400 text-emerald-950 font-bold px-2 py-0.5 rounded-md">
                   Administrator
@@ -700,7 +700,7 @@ export const AdminDashboardModal: React.FC = () => {
           {activeTab === 'settings' && (
             <form onSubmit={handleSaveSettings} className="bg-white rounded-2xl p-6 border border-zinc-200 space-y-6 max-w-3xl">
               <div>
-                <h3 className="text-base font-bold text-emerald-950">Alkhair Store & Contact Configuration</h3>
+                <h3 className="text-base font-bold text-emerald-950">Alrehman Store & Contact Configuration</h3>
                 <p className="text-xs text-zinc-500">Manage WhatsApp hotline numbers, delivery fees, and bank account data</p>
               </div>
 

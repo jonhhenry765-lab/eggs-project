@@ -40,7 +40,7 @@ export const AboutPage: React.FC = () => {
             <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img
                 src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1000&q=80"
-                alt="Alkhair Farm Flocks"
+                alt="Alrehman Farm Flocks"
                 className="w-full h-[450px] object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -55,13 +55,13 @@ export const AboutPage: React.FC = () => {
 
           <div className="lg:col-span-6 space-y-6 text-left">
             <h2 className="text-3xl font-black text-emerald-950 font-display">
-              Why We Started Alkhair Meta Eggs
+              Why We Started Alrehman Meta Eggs
             </h2>
             <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
               For decades, households across Pakistan have suffered from eggs stored in sweltering open-air godowns for weeks before reaching grocery shelves. Fragile albumen, degraded yolk nutrients, and cracked shells were accepted as unavoidable.
             </p>
             <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
-              <strong>Alkhair Meta Eggs</strong> was founded to break this outdated supply chain. By pairing environmentally managed poultry housing with direct-to-door temperature-protected logistics, we harvest eggs each morning and bring them straight to your kitchen within 24 to 48 hours.
+              <strong>Alrehman Meta Eggs</strong> was founded to break this outdated supply chain. By pairing environmentally managed poultry housing with direct-to-door temperature-protected logistics, we harvest eggs each morning and bring them straight to your kitchen within 24 to 48 hours.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2">

@@ -111,7 +111,7 @@ export const HeroSection: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
               <img
                 src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=1000&q=80"
-                alt="Alkhair Meta Eggs Farm Fresh Harvest"
+                alt="Alrehman Meta Eggs Farm Fresh Harvest"
                 className="w-full h-[400px] sm:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />

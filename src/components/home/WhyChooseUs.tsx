@@ -38,7 +38,7 @@ export const WhyChooseUs: React.FC = () => {
             Our Farming Standards
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-emerald-950 font-display tracking-tight">
-            Why Choose Alkhair Meta Eggs?
+            Why Choose Alrehman Meta Eggs?
           </h2>
           <p className="text-sm sm:text-base text-zinc-600">
             We operate with the conviction that ethical poultry farming, healthy bird nutrition, and spotless hygiene yield undeniably superior eggs and chicken for your family.
@@ -66,7 +66,7 @@ export const WhyChooseUs: React.FC = () => {
 
               <div className="pt-4 mt-4 border-t border-emerald-100/60 flex items-center gap-1.5 text-xs font-bold text-emerald-700">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Alkhair Quality Verified</span>
+                <span>Alrehman Quality Verified</span>
               </div>
             </div>
           ))}

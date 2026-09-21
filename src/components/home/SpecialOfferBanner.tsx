@@ -38,7 +38,7 @@ export const SpecialOfferBanner: React.FC = () => {
               </h2>
 
               <p className="text-sm sm:text-base text-emerald-100/90 max-w-xl leading-relaxed">
-                Order directly from Alkhair Meta Eggs and enjoy quality poultry products without unnecessary middlemen. Sourced early morning, packed into sanitized trays, and delivered in refrigerated vans.
+                Order directly from Alrehman Meta Eggs and enjoy quality poultry products without unnecessary middlemen. Sourced early morning, packed into sanitized trays, and delivered in refrigerated vans.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

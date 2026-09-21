@@ -81,7 +81,7 @@ export const AuthModal: React.FC = () => {
           </div>
 
           <h3 className="text-xl font-black font-display tracking-tight text-white">
-            Alkhair Meta Eggs
+            Alrehman Meta Eggs
           </h3>
           <p className="text-xs text-emerald-200 mt-0.5">
             {mode === 'login' ? 'Sign in to access orders & saved trays' : 'Create your fresh farm account'}

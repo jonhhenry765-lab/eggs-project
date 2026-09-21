@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
       return;
     }
     setNewsletterSuccess(true);
-    addToast('Subscribed!', 'Thank you for subscribing to Alkhair Farm fresh updates.');
+    addToast('Subscribed!', 'Thank you for subscribing to Alrehman Farm fresh updates.');
     setNewsletterEmail('');
     setTimeout(() => setNewsletterSuccess(false), 5000);
   };
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <span className="text-xl font-black tracking-tight text-white font-display">
-                  Alkhair <span className="text-amber-400">Meta Eggs</span>
+                  Alrehman <span className="text-amber-400">Meta Eggs</span>
                 </span>
                 <span className="block text-[11px] font-medium text-emerald-300 uppercase tracking-wider">
                   Farm Fresh • Punjab, Pakistan
@@ -317,7 +317,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-400/80">
-          <p>© 2026 Alkhair Meta Eggs. All Rights Reserved. Fresh From Our Farm, Trusted By Your Family.</p>
+          <p>© 2026 Alrehman Meta Eggs. All Rights Reserved. Fresh From Our Farm, Trusted By Your Family.</p>
           <div className="flex items-center gap-1 text-emerald-300">
             <span>Crafted with pride in</span>
             <span className="text-white font-bold">Pakistan 🇵🇰</span>

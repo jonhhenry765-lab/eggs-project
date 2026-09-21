@@ -49,7 +49,7 @@ export const OrderSuccessModal: React.FC = () => {
   };
 
   const getWhatsAppTrackUrl = () => {
-    const text = `Salam Alkhair Meta Eggs team!\n\nI just placed order *${order.orderNumber}* on your website.\n• Name: ${order.customerName}\n• Total: Rs. ${order.total.toLocaleString()}\n• City: ${order.city}\n• Payment: ${order.paymentMethod}\n\nPlease confirm order receipt and tracking updates. Thank you!`;
+    const text = `Salam Alrehman Meta Eggs team!\n\nI just placed order *${order.orderNumber}* on your website.\n• Name: ${order.customerName}\n• Total: Rs. ${order.total.toLocaleString()}\n• City: ${order.city}\n• Payment: ${order.paymentMethod}\n\nPlease confirm order receipt and tracking updates. Thank you!`;
     return `https://wa.me/${settings.whatsappNumber}?text=${encodeURIComponent(text)}`;
   };
 

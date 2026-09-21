@@ -133,19 +133,19 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   // Products
   const [products, setProducts] = useState<Product[]>(() => {
-    const saved = localStorage.getItem('alkhair_products');
+    const saved = localStorage.getItem('alrehman_products') || localStorage.getItem('alkhair_products');
     return saved ? JSON.parse(saved) : INITIAL_PRODUCTS;
   });
 
   // Categories
   const [categories, setCategories] = useState<CategoryInfo[]>(() => {
-    const saved = localStorage.getItem('alkhair_categories');
+    const saved = localStorage.getItem('alrehman_categories') || localStorage.getItem('alkhair_categories');
     return saved ? JSON.parse(saved) : CATEGORIES_DATA;
   });
 
   // Cart
   const [cart, setCart] = useState<CartItem[]>(() => {
-    const saved = localStorage.getItem('alkhair_cart');
+    const saved = localStorage.getItem('alrehman_cart') || localStorage.getItem('alkhair_cart');
     return saved ? JSON.parse(saved) : [];
   });
 
@@ -155,19 +155,19 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   // Wishlist
   const [wishlist, setWishlist] = useState<string[]>(() => {
-    const saved = localStorage.getItem('alkhair_wishlist');
+    const saved = localStorage.getItem('alrehman_wishlist') || localStorage.getItem('alkhair_wishlist');
     return saved ? JSON.parse(saved) : [];
   });
 
   // User
   const [user, setUser] = useState<User | null>(() => {
-    const saved = localStorage.getItem('alkhair_user');
+    const saved = localStorage.getItem('alrehman_user') || localStorage.getItem('alkhair_user');
     return saved ? JSON.parse(saved) : null;
   });
 
   // Orders
   const [orders, setOrders] = useState<Order[]>(() => {
-    const saved = localStorage.getItem('alkhair_orders');
+    const saved = localStorage.getItem('alrehman_orders') || localStorage.getItem('alkhair_orders');
     return saved ? JSON.parse(saved) : INITIAL_ORDERS;
   });
 
@@ -175,8 +175,28 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   // Settings
   const [settings, setSettings] = useState<StoreSettings>(() => {
-    const saved = localStorage.getItem('alkhair_settings');
-    return saved ? JSON.parse(saved) : DEFAULT_SETTINGS;
+    const saved = localStorage.getItem('alrehman_settings') || localStorage.getItem('alkhair_settings');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed.storeName === 'Alkhair Meta Eggs' || !parsed.storeName) {
+          parsed.storeName = 'Alrehman Meta Eggs';
+        }
+        if (parsed.email === 'info@alkhairmetaeggs.pro') {
+          parsed.email = 'info@alrehmanmetaeggs.pro';
+        }
+        if (parsed.accountTitle === 'Alkhair Meta Agribusiness Pvt Ltd') {
+          parsed.accountTitle = 'Alrehman Meta Agribusiness Pvt Ltd';
+        }
+        if (parsed.address && parsed.address.includes('Alkhair')) {
+          parsed.address = parsed.address.replace('Alkhair', 'Alrehman');
+        }
+        return { ...DEFAULT_SETTINGS, ...parsed };
+      } catch (e) {
+        return DEFAULT_SETTINGS;
+      }
+    }
+    return DEFAULT_SETTINGS;
   });
 
   // Toasts
@@ -184,35 +204,35 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   // Sync to LocalStorage
   useEffect(() => {
-    localStorage.setItem('alkhair_products', JSON.stringify(products));
+    localStorage.setItem('alrehman_products', JSON.stringify(products));
   }, [products]);
 
   useEffect(() => {
-    localStorage.setItem('alkhair_categories', JSON.stringify(categories));
+    localStorage.setItem('alrehman_categories', JSON.stringify(categories));
   }, [categories]);
 
   useEffect(() => {
-    localStorage.setItem('alkhair_cart', JSON.stringify(cart));
+    localStorage.setItem('alrehman_cart', JSON.stringify(cart));
   }, [cart]);
 
   useEffect(() => {
-    localStorage.setItem('alkhair_wishlist', JSON.stringify(wishlist));
+    localStorage.setItem('alrehman_wishlist', JSON.stringify(wishlist));
   }, [wishlist]);
 
   useEffect(() => {
     if (user) {
-      localStorage.setItem('alkhair_user', JSON.stringify(user));
+      localStorage.setItem('alrehman_user', JSON.stringify(user));
     } else {
-      localStorage.removeItem('alkhair_user');
+      localStorage.removeItem('alrehman_user');
     }
   }, [user]);
 
   useEffect(() => {
-    localStorage.setItem('alkhair_orders', JSON.stringify(orders));
+    localStorage.setItem('alrehman_orders', JSON.stringify(orders));
   }, [orders]);
 
   useEffect(() => {
-    localStorage.setItem('alkhair_settings', JSON.stringify(settings));
+    localStorage.setItem('alrehman_settings', JSON.stringify(settings));
   }, [settings]);
 
   // Toast Helper
@@ -343,6 +363,8 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const cleanId = emailOrPhone.trim().toLowerCase();
     // Check if admin
     if (
+      cleanId === 'admin@alrehmanmetaeggs.com' ||
+      cleanId === 'admin@alrehman.com' ||
       cleanId === 'admin@alkhairmetaeggs.com' ||
       cleanId === 'admin' ||
       cleanId === 'admin@alkhair.com'
@@ -350,14 +372,14 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const adminUser: User = {
         id: 'usr-admin-01',
         name: 'Farm Admin Manager',
-        email: 'admin@alkhairmetaeggs.com',
+        email: 'admin@alrehmanmetaeggs.com',
         phone: '0300-1234567',
         role: 'admin',
         createdAt: '2026-01-01',
         addresses: [
           {
             id: 'addr-farm',
-            label: 'Alkhair Farm Headquarter',
+            label: 'Alrehman Farm Headquarter',
             address: 'Sargodha Road, Chak 42-JB',
             city: 'Faisalabad',
             isDefault: true,
@@ -365,7 +387,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         ],
       };
       setUser(adminUser);
-      addToast('Welcome Admin!', 'Logged into Alkhair Meta Eggs administrative portal.');
+      addToast('Welcome Admin!', 'Logged into Alrehman Meta Eggs administrative portal.');
       return { success: true };
     }
 
@@ -373,7 +395,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const sampleUser: User = {
       id: 'usr-' + Date.now().toString().slice(-4),
       name: emailOrPhone.includes('@') ? emailOrPhone.split('@')[0] : 'Valued Customer',
-      email: emailOrPhone.includes('@') ? emailOrPhone : 'customer@alkhairmetaeggs.pro',
+      email: emailOrPhone.includes('@') ? emailOrPhone : 'customer@alrehmanmetaeggs.pro',
       phone: emailOrPhone.includes('@') ? '0301-7654321' : emailOrPhone,
       role: 'customer',
       createdAt: new Date().toISOString().slice(0, 10),
@@ -403,7 +425,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       addresses: [],
     };
     setUser(newUser);
-    addToast('Account Created!', `Welcome to Alkhair Meta Eggs, ${name}!`);
+    addToast('Account Created!', `Welcome to Alrehman Meta Eggs, ${name}!`);
     return { success: true };
   };
 
@@ -415,7 +437,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   const quickAdminLogin = () => {
-    login('admin@alkhairmetaeggs.com', 'admin123');
+    login('admin@alrehmanmetaeggs.com', 'admin123');
     setIsAdminOpen(true);
   };
 
@@ -508,7 +530,7 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // WhatsApp Order Link Generator
   const getWhatsAppOrderUrl = (singleProduct?: Product, quantity = 1) => {
     const waNumber = settings.whatsappNumber.replace(/[^0-9]/g, '');
-    let text = `Salam Alkhair Meta Eggs team!\n\n`;
+    let text = `Salam Alrehman Meta Eggs team!\n\n`;
 
     if (singleProduct) {
       text += `I would like to order:\n`;

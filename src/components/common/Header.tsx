@@ -103,7 +103,7 @@ export const Header: React.FC = () => {
             </div>
             <div>
               <span className="text-xl sm:text-2xl font-black tracking-tight text-emerald-950 font-display flex items-center gap-1">
-                Alkhair <span className="text-emerald-700">Meta Eggs</span>
+                Alrehman <span className="text-emerald-700">Meta Eggs</span>
               </span>
               <span className="block text-[11px] font-medium text-emerald-600/90 tracking-wide uppercase">
                 Fresh From Farm • Pakistan
@@ -452,7 +452,7 @@ export const Header: React.FC = () => {
 
             <div className="pt-3 border-t border-zinc-100">
               <a
-                href={`https://wa.me/${settings.whatsappNumber}?text=Salam%20Alkhair%20Meta%20Eggs%20team,%20I%20would%20like%20to%20place%20an%20order.`}
+                href={`https://wa.me/${settings.whatsappNumber}?text=Salam%20Alrehman%20Meta%20Eggs%20team,%20I%20would%20like%20to%20place%20an%20order.`}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm shadow-md"

@@ -65,7 +65,7 @@ export const CheckoutModal: React.FC = () => {
     setTimeout(() => {
       placeOrder({
         customerName: fullName.trim(),
-        customerEmail: email.trim() || 'customer@alkhairmetaeggs.pro',
+        customerEmail: email.trim() || 'customer@alrehmanmetaeggs.pro',
         customerPhone: phone.trim(),
         address: address.trim(),
         city: city.trim(),
@@ -354,7 +354,7 @@ export const CheckoutModal: React.FC = () => {
               <div className="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 text-xs space-y-1.5 text-amber-950 animate-in fade-in duration-200">
                 <p className="font-bold flex items-center gap-1.5 text-amber-900">
                   <ShieldCheck className="w-4 h-4 text-amber-600" />
-                  <span>Alkhair Official Bank Account Details:</span>
+                  <span>Alrehman Official Bank Account Details:</span>
                 </p>
                 <div className="grid grid-cols-2 gap-2 pt-1 font-mono text-[11px]">
                   <div>Bank: <strong>{settings.bankName}</strong></div>

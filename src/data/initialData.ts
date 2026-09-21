@@ -1,14 +1,14 @@
 import { CategoryInfo, Order, Product, Review, StoreSettings } from '../types';
 
 export const DEFAULT_SETTINGS: StoreSettings = {
-  storeName: 'Alkhair Meta Eggs',
+  storeName: 'Alrehman Meta Eggs',
   tagline: 'Fresh From Our Farm. Trusted By Your Family.',
   phone: '+92 300 1234567',
   displayPhone: '0300-1234567',
   whatsappNumber: '923001234567',
   displayWhatsApp: '+92 300 1234567',
-  email: 'info@alkhairmetaeggs.pro',
-  address: 'Alkhair Poultry Complex, Sargodha Road, Chak 42-JB',
+  email: 'info@alrehmanmetaeggs.pro',
+  address: 'Alrehman Poultry Complex, Sargodha Road, Chak 42-JB',
   city: 'Faisalabad',
   province: 'Punjab, Pakistan',
   businessHours: 'Monday - Sunday: 7:00 AM – 9:00 PM',
@@ -16,7 +16,7 @@ export const DEFAULT_SETTINGS: StoreSettings = {
   freeDeliveryThreshold: 2500,
   standardDeliveryFee: 180,
   bankName: 'Meezan Bank Ltd.',
-  accountTitle: 'Alkhair Meta Agribusiness Pvt Ltd',
+  accountTitle: 'Alrehman Meta Agribusiness Pvt Ltd',
   accountNumber: '02010108765432',
   iban: 'PK45MEZN0002010108765432',
   announcementText: '🎉 Free Express Farm Delivery on all orders above Rs. 2,500 across Punjab & Islamabad!',
@@ -199,7 +199,7 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'p-6',
-    name: 'Alkhair High-Protein Layer Poultry Feed',
+    name: 'Alrehman High-Protein Layer Poultry Feed',
     slug: 'poultry-feed-layer-10kg',
     category: 'Farm Supplies',
     shortDescription: '10 KG fortified layer feed with organic calcium, corn & toasted soya.',
@@ -320,7 +320,7 @@ export const INITIAL_REVIEWS: Review[] = [
     customerName: 'Chaudhry Muhammad Tariq',
     location: 'Gulberg III, Lahore',
     rating: 5,
-    text: 'Alkhair Meta Eggs has completely changed our family breakfast. The yolks are rich and golden, and there wasn’t a single broken egg in the tray. Delivery was right on time the next morning.',
+    text: 'Alrehman Meta Eggs has completely changed our family breakfast. The yolks are rich and golden, and there wasn’t a single broken egg in the tray. Delivery was right on time the next morning.',
     date: '3 days ago',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
     verified: true,
@@ -360,7 +360,7 @@ export const INITIAL_REVIEWS: Review[] = [
     customerName: 'Engr. Bilal Naseem',
     location: 'Bahria Town Phase 7, Rawalpindi',
     rating: 5,
-    text: 'The best poultry service in Pakistan. Their customer care is prompt and polite. You can instantly taste the difference between supermarket eggs stored for weeks vs Alkhair eggs picked yesterday.',
+    text: 'The best poultry service in Pakistan. Their customer care is prompt and polite. You can instantly taste the difference between supermarket eggs stored for weeks vs Alrehman eggs picked yesterday.',
     date: '1 month ago',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80',
     verified: true,
@@ -493,7 +493,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'How fresh are your products?',
-    answer: 'Our eggs are gathered every single morning, inspected, candled for quality, packaged, and dispatched to customers within 24 to 48 hours of lay. Supermarket eggs typically sit in storage for 2 to 4 weeks before reaching your kitchen—Alkhair eggs arrive truly farm-fresh.',
+    answer: 'Our eggs are gathered every single morning, inspected, candled for quality, packaged, and dispatched to customers within 24 to 48 hours of lay. Supermarket eggs typically sit in storage for 2 to 4 weeks before reaching your kitchen—Alrehman eggs arrive truly farm-fresh.',
   },
   {
     question: 'Do you offer home delivery?',
